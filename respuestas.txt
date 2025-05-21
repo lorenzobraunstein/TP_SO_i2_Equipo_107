@@ -1,5 +1,10 @@
-a-
-b-
-c-
-d-
-e-
+a-Agregar la referencia al repositorio remoto original, al cual llamaremos «upstream», esto lo logramos con el comando:git remote add upstream https://github.com/whoever/whatever.git
+    Traernos todas las ramas de dicho repositorio remoto con: git fetch upstream
+    Irnos a la rama que queremos actualizar, por ejemplo master: git checkout master
+    Reescribir nuestra rama master con los commits nuevos de la rama master del repositorio original con:
+git rebase upstream/master
+    Finalmente si queremos actualizar nuestro fork remoto, lo haremos ejecutando git push -f origin master
+b- Sí, Alfa puede actualizar su fork para reflejar el estado del fork de Gamma, siempre y cuando ambos forks provengan del mismo repositorio original
+c-si.
+d-si, si los cambios no fueron guardados/pusheados, se pierden.
+e-el paso a paso de los comandos fue : git clone , git status para ver los archivos modificados , luego usamos git add . , git commit -m "subir tarea" y por ultimo usamos git push
